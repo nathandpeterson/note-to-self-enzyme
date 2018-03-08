@@ -6,4 +6,7 @@ Coding along with a udemy tutorial [here](https://github.com/15Dkatz/react-testi
 * Enzyme
 * React
 
-Just start watching with ```jest --watch```
+Full coverage (for this admittedly simple app):
+![Screen shot showing 100% coverage](coverage.png)
+
+To start tests, use ```jest --watch```
