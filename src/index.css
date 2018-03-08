@@ -2,3 +2,14 @@ body {
     text-align: center;
     padding: 5%;
 }
+
+.note {
+    border: 1px solid gray;
+    border-radius: 7px;
+    padding: 3rem;
+    font-size: 2.5rem;
+    background: lightblue;
+    margin: 2% 10%;
+    display: flex;
+    justify-content: space-between;
+}
