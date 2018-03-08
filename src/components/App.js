@@ -6,22 +6,25 @@ import { bake_cookie, read_cookie, delete_cookie } from 'sfcookies'
 const cookie_key = 'NOTES'
 
 class App extends Component {
+    constructor(){
+        super()
 
-    state = {text: '',
-            notes: []}
+        this.state = {text: '', notes: []}
+    }
 
-    handleChange = (e) => {
+    handleChange(e){
         this.setState({text: e.target.value})
     }
 
-    handleClick = (e) => {
+    handleClick(e){
         e.preventDefault()
-        const notes = [this.state.text, ...this.state.notes]
+        const text = this.state.text
+        const notes = [{text}, ...this.state.notes]
         this.setState({notes, text: ''})
         bake_cookie(cookie_key, notes)    
     }
 
-    clearNotes = (e) => {
+    clearNotes(e){
         e.preventDefault()
         delete_cookie(cookie_key)
         this.setState({notes: []})
