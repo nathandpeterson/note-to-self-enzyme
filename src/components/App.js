@@ -10,6 +10,7 @@ class App extends Component {
         super()
 
         this.state = {text: '', notes: []}
+        
     }
 
     handleChange(e){
@@ -41,14 +42,14 @@ class App extends Component {
             <div>
                 <h2>NOTE TO SELF</h2>
                 <Form inline>
-                    <FormControl onChange={this.handleChange} value={this.state.text} />
-                    {' '}
-                    <Button onClick={this.handleClick}>SUBMIT</Button>
+                    <FormControl onChange={e => this.handleChange(e)} value={this.state.text} />
+                    <hr />
+                    <Button onClick={e => this.handleClick(e)}>SUBMIT</Button>
                 </Form>
                 {this.state.notes.map((note, i) => {
                     return <Note key={i} note={note}/>
                 })}
-                <Button onClick={this.clearNotes}>Clear Notes</Button>
+                <Button onClick={e => this.clearNotes(e)}>Clear Notes</Button>
             </div>
         )
     }
