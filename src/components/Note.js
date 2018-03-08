@@ -3,10 +3,11 @@ import React, { Component } from 'react'
 class Note extends Component {
 
     render() {
-        const { note } = this.props
+        console.log((this.props.note));
+        
         return (
             <div className='note'>
-                <p>{note}</p>
+                <p>{this.props.note}</p>
             </div>
         )
     }
